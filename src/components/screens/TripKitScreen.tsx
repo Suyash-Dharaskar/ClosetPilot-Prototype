@@ -48,12 +48,16 @@ export const TripKitScreen = ({ destination, setDestination, startDate, setStart
 
     const handleGetTripSuggestionsInternal = async () => {
         if (!destination || !startDate || !endDate) return;
+        // Validate date range
+        if (endDate < startDate) {
+            toast({ variant: 'destructive', title: 'Invalid Date Range', description: 'End date must be after start date.' });
+            return;
+        }
         setIsGeneratingTripKit(true);
         setTripSuggestions(null);
         setActiveStrategy(0);
         try {
             const aiClosetItems = closetItems.map((item: any) => ({ name: item.name, tags: item.tags }));
-            // AI call only requires destination and dates currently, but the UI is complete.
             const suggestions = await generatePackingSuggestions({
                 destination,
                 travelDates: `${startDate} to ${endDate}`,
@@ -152,7 +156,14 @@ export const TripKitScreen = ({ destination, setDestination, startDate, setStart
                 </div>
             </div>
 
-            <div className="p-4 space-y-6 flex-1 overflow-y-auto pb-6 animate-in fade-in duration-300">
+            <div className="p-4 space-y-6 flex-1 overflow-y-auto pb-6 animate-in fade-in duration-300 relative">
+                {/* Loading overlay */}
+                {isGeneratingTripKit && !tripSuggestions && (
+                    <div className="absolute inset-0 bg-background/80 backdrop-blur-sm z-20 flex flex-col items-center justify-center gap-4">
+                        <LoaderCircle className="w-10 h-10 animate-spin text-primary" />
+                        <p className="text-sm text-muted-foreground font-medium">Curating your packing list...</p>
+                    </div>
+                )}
                 <div className="space-y-5">
                     <div className="space-y-1.5">
                         <label className="text-sm font-semibold text-slate-700">Destination</label>
