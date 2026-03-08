@@ -1,0 +1,90 @@
+{
+  "closet": {
+    "shirt": {
+      "src": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=400&fit=crop",
+      "hint": "blue button up shirt on hanger"
+    },
+    "trousers": {
+      "src": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400&h=400&fit=crop",
+      "hint": "black chinos pants"
+    },
+    "shoes": {
+      "src": "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=400&h=400&fit=crop",
+      "hint": "white leather sneakers"
+    },
+    "blackTee": {
+      "src": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&h=400&fit=crop",
+      "hint": "black graphic t-shirt on hanger"
+    },
+    "greyHoodie": {
+      "src": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop",
+      "hint": "grey hoodie"
+    },
+    "leatherJacket": {
+      "src": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop",
+      "hint": "black leather jacket"
+    },
+    "greenJacket": {
+      "src": "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=400&h=400&fit=crop",
+      "hint": "olive green utility jacket"
+    },
+    "denimJacket": {
+      "src": "https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?w=400&h=400&fit=crop",
+      "hint": "blue denim jacket"
+    },
+    "brownBoots": {
+      "src": "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400&h=400&fit=crop",
+      "hint": "brown leather boots"
+    },
+    "brownShoes": {
+      "src": "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=400&h=400&fit=crop",
+      "hint": "brown leather dress shoes"
+    },
+    "blackSneakers": {
+      "src": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&h=400&fit=crop",
+      "hint": "black athletic sneakers"
+    },
+    "greenSneaker": {
+      "src": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=400&fit=crop",
+      "hint": "green neon running sneaker"
+    },
+    "silverWatch": {
+      "src": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400&h=400&fit=crop",
+      "hint": "silver watch brown leather strap"
+    },
+    "whiteTee": {
+      "src": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+      "hint": "white crew neck t-shirt"
+    },
+    "navyPolo": {
+      "src": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=400&h=400&fit=crop",
+      "hint": "navy blue polo shirt"
+    },
+    "blueJeans": {
+      "src": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=400&fit=crop",
+      "hint": "blue denim jeans"
+    },
+    "khakiChinos": {
+      "src": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=400&h=400&fit=crop",
+      "hint": "khaki chinos pants"
+    },
+    "greyBeanie": {
+      "src": "https://images.unsplash.com/photo-1510598969022-c4c6c5d05769?w=400&h=400&fit=crop",
+      "hint": "grey knit beanie"
+    },
+    "plaidScarf": {
+      "src": "https://images.unsplash.com/photo-1601924921557-45e8e0964571?w=400&h=400&fit=crop",
+      "hint": "plaid scarf"
+    },
+    "redPuffer": {
+      "src": "https://images.unsplash.com/photo-1544923246-77307dd270b1?w=400&h=400&fit=crop",
+      "hint": "red puffer jacket"
+    }
+  },
+  "camera": {
+    "placeholder": {
+      "src": "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=400&fit=crop",
+      "hint": "clothing item"
+    }
+  }
+}
