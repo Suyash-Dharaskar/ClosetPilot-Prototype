@@ -12,7 +12,7 @@ export const BottomNav = ({ activeTab, setActiveTab }: { activeTab: Tab; setActi
   ];
 
   return (
-    <nav className="absolute bottom-0 w-full bg-white border-t z-30">
+    <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-sm bg-white border-t z-30" style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}>
       <div className="flex justify-around items-center h-16">
         {navItems.map(({ id, icon: Icon, label }) => (
           <button
