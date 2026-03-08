@@ -426,7 +426,7 @@ export default function ClosetPilotPage() {
   }
 
   return (
-    <div className="w-full max-w-sm mx-auto bg-background flex flex-col relative" style={{ height: '100dvh' }}>
+    <div className="w-full max-w-md mx-auto bg-background flex flex-col relative" style={{ height: '100dvh' }}>
       <main className="flex-1 overflow-y-auto pb-20">
         {activeTab === 'closet' && (
           <ClosetScreen
@@ -459,7 +459,7 @@ export default function ClosetPilotPage() {
       </main>
 
       {activeTab === 'closet' && (
-        <Button onClick={handleFabClick} className="fixed bottom-24 right-4 z-40 h-16 w-16 rounded-full shadow-lg max-w-sm" style={{ backgroundColor: '#2563EB', right: 'max(1rem, calc((100vw - 24rem) / 2 + 1rem))' }}>
+        <Button onClick={handleFabClick} className="fixed bottom-24 right-4 z-40 h-16 w-16 rounded-full shadow-lg" style={{ backgroundColor: '#2563EB', right: 'max(1rem, calc((100vw - 28rem) / 2 + 1rem))' }}>
           <Plus className="h-8 w-8 text-white" />
         </Button>
       )}
