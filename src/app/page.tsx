@@ -333,7 +333,7 @@ export default function ClosetPilotPage() {
 
   if (!isLoggedIn) {
     return (
-      <div className="w-full max-w-sm mx-auto h-screen flex flex-col items-center justify-between py-12 px-8" style={{ background: 'linear-gradient(180deg, #0B2545 0%, #13315C 40%, #2563EB 100%)' }}>
+      <div className="w-full max-w-md mx-auto flex flex-col items-center justify-between py-12 px-8" style={{ height: '100dvh', background: 'linear-gradient(180deg, #0B2545 0%, #13315C 40%, #2563EB 100%)' }}>
         <div />
         <div className="flex flex-col items-center text-center">
           <div className="w-20 h-20 bg-white/15 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-white/20">
@@ -364,7 +364,7 @@ export default function ClosetPilotPage() {
   // Show cropper after camera capture
   if (capturedPhoto) {
     return (
-      <div className="w-full max-w-sm mx-auto h-screen bg-black flex flex-col relative overflow-hidden">
+      <div className="w-full max-w-md mx-auto bg-black flex flex-col relative overflow-hidden" style={{ height: '100dvh' }}>
         <ImageCropper
           imageSrc={capturedPhoto}
           onCropDone={handleCropDone}
@@ -377,7 +377,7 @@ export default function ClosetPilotPage() {
   // Show multi-item selection UI
   if (multiItemData) {
     return (
-      <div className="w-full max-w-sm mx-auto h-screen bg-background flex flex-col">
+      <div className="w-full max-w-md mx-auto bg-background flex flex-col" style={{ height: '100dvh' }}>
         <div className="p-4 space-y-4 flex flex-col h-full">
           <header>
             <h2 className="text-2xl font-bold">Multiple Items Detected</h2>
@@ -414,7 +414,7 @@ export default function ClosetPilotPage() {
 
   if (scannedItemData) {
     return (
-      <div className="w-full max-w-sm mx-auto h-screen bg-background flex flex-col relative overflow-hidden">
+      <div className="w-full max-w-md mx-auto bg-background flex flex-col relative overflow-hidden" style={{ height: '100dvh' }}>
         <AddItemScreen
           itemData={scannedItemData}
           isProcessing={isProcessing}
