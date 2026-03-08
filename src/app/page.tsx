@@ -356,6 +356,10 @@ export default function ClosetPilotPage() {
           <Input type="password" placeholder="Password" value={loginPassword} onChange={e => setLoginPassword(e.target.value)} onKeyDown={e => e.key === 'Enter' && handleLogin()} className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/50 rounded-xl h-12 focus:bg-white/20" />
           <Button onClick={handleLogin} className="w-full h-12 text-lg rounded-xl font-semibold shadow-lg" style={{ backgroundColor: '#ffffff', color: '#0B2545' }}>Log In</Button>
         </div>
+        <div className="text-center space-y-0.5">
+          <p className="text-white/50 text-xs">Crafted with ❤️ by DT & VK</p>
+          <p className="text-white/40 text-xs font-medium tracking-wide">IIM Lucknow</p>
+        </div>
       </div>
     );
   }
