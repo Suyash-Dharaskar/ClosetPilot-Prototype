@@ -155,7 +155,15 @@ export default function ClosetPilotPage() {
   }, [activeFilters, closetItems, categoryMapping, weatherMapping]);
 
 
-  const handleLogin = () => setIsLoggedIn(true);
+  const [loginEmail, setLoginEmail] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
+  const handleLogin = () => {
+    if (loginEmail === 'pgp41511@iiml.ac.in' && loginPassword === 'Suyash_Dharaskar') {
+      setIsLoggedIn(true);
+    } else {
+      toast({ variant: 'destructive', title: 'Login Failed', description: 'Invalid email or password. Please try again.' });
+    }
+  };
 
   const handleFabClick = () => {
     if (isMobile) {
@@ -343,19 +351,9 @@ export default function ClosetPilotPage() {
           <p className="text-white/70 text-sm flex items-center gap-1"><Sparkles className="w-3.5 h-3.5" /> AI-Powered Digital Wardrobe</p>
         </div>
         <div className="w-full space-y-3">
-          <Input type="email" placeholder="Email" className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/50 rounded-xl h-12 focus:bg-white/20" />
-          <Input type="password" placeholder="Password" className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/50 rounded-xl h-12 focus:bg-white/20" />
+          <Input type="email" placeholder="Email" value={loginEmail} onChange={e => setLoginEmail(e.target.value)} className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/50 rounded-xl h-12 focus:bg-white/20" />
+          <Input type="password" placeholder="Password" value={loginPassword} onChange={e => setLoginPassword(e.target.value)} className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/50 rounded-xl h-12 focus:bg-white/20" />
           <Button onClick={handleLogin} className="w-full h-12 text-lg rounded-xl font-semibold shadow-lg" style={{ backgroundColor: '#ffffff', color: '#0B2545' }}>Log In</Button>
-          <div className="flex items-center gap-3 my-2">
-            <div className="flex-1 h-px bg-white/20" />
-            <span className="text-white/40 text-xs">or continue with</span>
-            <div className="flex-1 h-px bg-white/20" />
-          </div>
-          <div className="flex gap-3">
-            <Button variant="outline" className="flex-1 h-11 rounded-xl bg-white/10 border-white/20 text-white hover:bg-white/20 hover:text-white">Google</Button>
-            <Button variant="outline" className="flex-1 h-11 rounded-xl bg-white/10 border-white/20 text-white hover:bg-white/20 hover:text-white">Apple</Button>
-          </div>
-          <p className="text-center text-white/50 text-xs mt-4">Don't have an account? <span className="text-white/90 font-medium underline cursor-pointer">Sign Up</span></p>
         </div>
       </div>
     );
