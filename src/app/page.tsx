@@ -312,11 +312,12 @@ export default function ClosetPilotPage() {
     setClosetItems(prev => prev.filter(item => item.src !== selectedItem.src));
     setIsDeleteAlertOpen(false);
 
-    // Radix UI bug fix: Let the dialog animate out before clearing the item state
-    // so it properly removes `pointer-events: none` from the document body.
+    // Radix UI bug fix: dialogs can leave `pointer-events: none` on <body>.
+    // We clear the item state after animation AND force-reset body pointer-events.
     setTimeout(() => {
       setSelectedItem(null);
-    }, 300);
+      document.body.style.pointerEvents = '';
+    }, 350);
 
     toast({ title: 'Item Removed', description: `${itemName} has been removed.` });
   };
