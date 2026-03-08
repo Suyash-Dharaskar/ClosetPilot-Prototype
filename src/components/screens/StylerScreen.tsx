@@ -78,7 +78,7 @@ export const StylerScreen = ({ occasion, setOccasion, isGeneratingFit, fitSugges
         } catch (error) {
             console.error(error);
             toast({ variant: 'destructive', title: "Error", description: "Failed to generate fit." });
-            setStep('clarify');
+            setStep('input');
         } finally {
             setIsGeneratingFit(false);
         }
@@ -86,6 +86,7 @@ export const StylerScreen = ({ occasion, setOccasion, isGeneratingFit, fitSugges
 
     const handleStartOver = () => {
         setStep('input');
+        setOccasion('');
         setFitSuggestions(null);
         setClarifyingQuestions(null);
         setSelectedAnswers({});

@@ -352,7 +352,7 @@ export default function ClosetPilotPage() {
         </div>
         <div className="w-full space-y-3">
           <Input type="email" placeholder="Email" value={loginEmail} onChange={e => setLoginEmail(e.target.value)} className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/50 rounded-xl h-12 focus:bg-white/20" />
-          <Input type="password" placeholder="Password" value={loginPassword} onChange={e => setLoginPassword(e.target.value)} className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/50 rounded-xl h-12 focus:bg-white/20" />
+          <Input type="password" placeholder="Password" value={loginPassword} onChange={e => setLoginPassword(e.target.value)} onKeyDown={e => e.key === 'Enter' && handleLogin()} className="bg-white/10 backdrop-blur-sm border-white/20 text-white placeholder:text-white/50 rounded-xl h-12 focus:bg-white/20" />
           <Button onClick={handleLogin} className="w-full h-12 text-lg rounded-xl font-semibold shadow-lg" style={{ backgroundColor: '#ffffff', color: '#0B2545' }}>Log In</Button>
         </div>
       </div>
